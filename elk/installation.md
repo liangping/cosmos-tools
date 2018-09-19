@@ -11,32 +11,41 @@ Install ELK:
 
 download and unzip the following files.
 
-> wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.4.0.tar.gz
-> wget https://artifacts.elastic.co/downloads/logstash/logstash-6.4.0.tar.gz
-> wget https://artifacts.elastic.co/downloads/kibana/kibana-6.4.0-linux-x86_64.tar.gz
-
+```
+wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.4.0.tar.gz
+wget https://artifacts.elastic.co/downloads/logstash/logstash-6.4.0.tar.gz
+wget https://artifacts.elastic.co/downloads/kibana/kibana-6.4.0-linux-x86_64.tar.gz
+```
 Configuration:
 
 1. Run elasticsearch.
 
-> cd path/to/elasticsearch
-> bin/elasticsearch
-> curl http://localhost:9200/
-
+```
+  cd path/to/elasticsearch
+  bin/elasticsearch
+  curl http://localhost:9200/
+```
 2. Run Kibana
-
-> cd path/to/kibana
-> open config/kibana.yml and set **elasticsearch.url** to point at your Elasticsearch instance, set **server.host** to external ip
-> bin/kibana
-> curl http://localhost:5601
+```
+cd path/to/kibana
+open config/kibana.yml and set **elasticsearch.url** to point at your Elasticsearch instance, set **server.host** to external ip
+bin/kibana
+curl http://localhost:5601
+```
 
 3. Run Logstash on each cosmos node.
-> cd path/to/logstash
-> create a cosmos.conf.
-> bin/logstash -f cosmos.conf
+```
+cd path/to/logstash
+create a cosmos.conf.
+bin/logstash -f cosmos.conf
+```
 
-You can download cosmos.conf from https://raw.githubusercontent.com/liangping/cosmos-tools/master/elk/cosmos.conf
+You can download *cosmos.conf* from https://raw.githubusercontent.com/liangping/cosmos-tools/master/elk/cosmos.conf
 
 Then you can manage your logs in one log management server. (Perhaps you will need wait a couple of minutes to see logs on kibana)
+
+Currently , we have to install logstash on each cosmos-node host for centralized log management.  
+In future, I will make this more easy by using `gaiad start | nc -u loghost port ` command. 
+This is command is not work well with multi-line logs on current version of cosmos. I will update this when cosmos is able to output log as json.
 
 I hope you will enjoy this amazing tool.
