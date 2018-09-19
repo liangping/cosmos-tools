@@ -29,7 +29,7 @@ query:
 ![Block Transactions](https://discourse-cdn-sjc2.com/standard11/uploads/cosmos1/original/1X/2fb2081560e610a2238e4a7a181a24dc7ed13cbd.png)
 
 7 Block with evidence ("" means no evidence )
-![Block Double Signs](https://discourse-cdn-sjc2.com/standard11/uploads/cosmos1/original/1X/d8091527c03600b0b242a65ec00dab2e9ea56fc4.png)
+![Block Double Signs](https://discourse-cdn-sjc2.com/standard11/uploads/cosmos1/original/1X/96f5d34961b019c0a5dfb74bd11ee9e0510105f1.jpeg)
 
 8 Top errors from Info level
 ![Top Error](https://discourse-cdn-sjc2.com/standard11/uploads/cosmos1/original/1X/8ad856b61c4d69431b39f30da5a451c5858070ef.png)
