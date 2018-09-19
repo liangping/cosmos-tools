@@ -46,6 +46,6 @@ Then you can manage your logs in one log management server. (Perhaps you will ne
 
 Currently , we have to install logstash on each cosmos-node host for centralized log management.  
 In future, I will make this more easy by using `gaiad start | nc -u loghost port ` command. 
-This is command is not work well with multi-line logs on current version of cosmos. I will update this when cosmos is able to output log as json.
+This command is not work well with multi-line logs on current version of cosmos. I will update this when cosmos is able to output log as json.
 
 I hope you will enjoy this amazing tool.
